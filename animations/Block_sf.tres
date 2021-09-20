@@ -1,0 +1,95 @@
+[gd_resource type="SpriteFrames" format=2]
+
+[resource]
+animations = [ {
+"frames": [ null ],
+"loop": false,
+"name": "blue_death",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "yellow_idle",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null ],
+"loop": true,
+"name": "weener",
+"speed": 3.0
+}, {
+"frames": [ null ],
+"loop": false,
+"name": "purple_death",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "purple_idle",
+"speed": 10.0
+}, {
+"frames": [ null ],
+"loop": false,
+"name": "red_death",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "red_idle",
+"speed": 10.0
+}, {
+"frames": [ null ],
+"loop": false,
+"name": "full_death",
+"speed": 10.0
+}, {
+"frames": [ null ],
+"loop": false,
+"name": "yellow_death",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "green_idle",
+"speed": 10.0
+}, {
+"frames": [ null ],
+"loop": false,
+"name": "green_death",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "blue_idle",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "full_idle",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "teal_idle",
+"speed": 10.0
+}, {
+"frames": [ null ],
+"loop": false,
+"name": "teal_death",
+"speed": 10.0
+}, {
+"frames": [ null ],
+"loop": false,
+"name": "special_death",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "special_idle",
+"speed": 10.0
+}, {
+"frames": [ null ],
+"loop": false,
+"name": "empty_idle",
+"speed": 1.0
+} ]
+

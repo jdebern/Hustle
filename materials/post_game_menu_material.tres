@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://shaders/post_game_menu.shader" type="Shader" id=1]
+[ext_resource path="res://textures/ui/background_mask.png" type="Texture" id=2]
+
+[resource]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/screen_mask_color = Color( 0, 0, 0, 1 )
+shader_param/color_mask = Color( 0, 0, 0, 1 )
+shader_param/color_replace = Color( 0.0352941, 0.345098, 0.878431, 1 )
+shader_param/screen_mask = ExtResource( 2 )
+_sections_unfolded = [ "shader_param" ]
+

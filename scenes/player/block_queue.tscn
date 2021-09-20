@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/BlockQueue.gd" type="Script" id=1]
+
+[node name="block_queue" type="Node2D"]
+
+position = Vector2( 0, 2 )
+script = ExtResource( 1 )
+DropInterval = 1.0
+
+

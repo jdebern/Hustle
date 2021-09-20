@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://textures/ui/title.png" type="Texture" id=1]
+[ext_resource path="res://scripts/rules/StartCountdown.gd" type="Script" id=2]
+
+[node name="start_countdown" type="Sprite"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 48, 41, 51 )
+script = ExtResource( 2 )
+Region_3 = Rect2( 0, 48, 41, 51 )
+Region_2 = Rect2( 42, 44, 41, 53 )
+Region_1 = Rect2( 84, 44, 21, 55 )
+Region_Go = Rect2( 106, 47, 101, 55 )
+

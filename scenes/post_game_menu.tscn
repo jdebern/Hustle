@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/PostGameMenu.gd" type="Script" id=1]
+[ext_resource path="res://materials/menu_item_selected.tres" type="Material" id=2]
+[ext_resource path="res://textures/ui/rematch_text.png" type="Texture" id=3]
+[ext_resource path="res://textures/ui/quit_text.png" type="Texture" id=4]
+
+[node name="post_game_menu" type="Node2D" index="0"]
+script = ExtResource( 1 )
+speed = 1.5
+hidden_time = 1.5
+
+[node name="rematch_button" type="Sprite" parent="." index="0"]
+material = ExtResource( 2 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 1, 103, 78, 16 )
+_sections_unfolded = [ "Material", "Offset", "Region", "Transform" ]
+
+[node name="quit_button" type="Sprite" parent="." index="1"]
+position = Vector2( 0, 20 )
+texture = ExtResource( 4 )
+region_rect = Rect2( 85, 101, 49, 17 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform" ]
+

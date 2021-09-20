@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/rules/VersusRules.gd" type="Script" id=1]
+[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/player/player_2.tscn" type="PackedScene" id=3]
+
+[node name="root" type="Node2D"]
+z_as_relative = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 240.0 ],
+"_edit_vertical_guides_": [ 320.0 ]
+}
+
+[node name="player_1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 20, 36 )
+
+[node name="player_2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 172, 36 )

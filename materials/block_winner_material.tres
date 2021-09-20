@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://shaders/contrast_blink.shader" type="Shader" id=1]
+[ext_resource path="res://textures/ui/background_mask.png" type="Texture" id=2]
+
+[resource]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/Contrast = 1.2
+shader_param/Brightness = 0.0
+shader_param/Smooth = true
+shader_param/mask_color = null
+shader_param/mask = ExtResource( 2 )
+_sections_unfolded = [ "shader_param" ]
+

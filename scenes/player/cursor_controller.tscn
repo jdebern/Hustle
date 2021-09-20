@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/player/CursorControl.gd" type="Script" id=1]
+[ext_resource path="res://scenes/player/cursor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://materials/masked_material.tres" type="Material" id=3]
+
+[node name="cursor_controller" type="Node2D" index="0"]
+script = ExtResource( 1 )
+UseMouse = false
+
+[node name="cursor_a" parent="." index="0" instance=ExtResource( 2 )]
+material = ExtResource( 3 )
+z_index = 1
+z_as_relative = false
+_sections_unfolded = [ "Material", "Z", "Z Index" ]
+
+[node name="cursor_b" parent="." index="1" instance=ExtResource( 2 )]
+material = ExtResource( 3 )
+z_index = 1
+z_as_relative = false
+_sections_unfolded = [ "Material", "Z", "Z Index" ]
+

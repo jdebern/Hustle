@@ -1,0 +1,328 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scripts/screens/OptionsScreen.gd" type="Script" id=1]
+[ext_resource path="res://textures/ui/options_text.png" type="Texture" id=2]
+[ext_resource path="res://textures/ui/difficulty_text.png" type="Texture" id=3]
+[ext_resource path="res://textures/ui/slow_text.png" type="Texture" id=4]
+[ext_resource path="res://textures/ui/normal_text.png" type="Texture" id=5]
+[ext_resource path="res://textures/ui/extreme_text.png" type="Texture" id=6]
+[ext_resource path="res://textures/ui/scale_text.png" type="Texture" id=7]
+[ext_resource path="res://textures/ui/single_text.png" type="Texture" id=8]
+[ext_resource path="res://textures/ui/double_text.png" type="Texture" id=9]
+[ext_resource path="res://textures/ui/triple_text.png" type="Texture" id=10]
+[ext_resource path="res://textures/ui/fullscreen_text.png" type="Texture" id=11]
+[ext_resource path="res://textures/ui/color_text.png" type="Texture" id=12]
+[ext_resource path="res://animations/game_blocks.tres" type="SpriteFrames" id=13]
+[ext_resource path="res://textures/ui/back_text.png" type="Texture" id=14]
+[ext_resource path="res://textures/ui/carot.png" type="Texture" id=15]
+
+[node name="options" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="background" type="Polygon2D" parent="."]
+position = Vector2( 0.717178, 63.9945 )
+scale = Vector2( 1.13919, 1.17045 )
+color = Color( 0, 0, 0, 0.372549 )
+polygon = PoolVector2Array( 8, 100, 260, 100, 260, -4, 8, -4 )
+
+[node name="title" type="Sprite" parent="."]
+position = Vector2( 160, 30 )
+texture = ExtResource( 2 )
+
+[node name="difficulty" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 60, 78 )
+texture = ExtResource( 3 )
+
+[node name="slow" type="Sprite" parent="difficulty"]
+position = Vector2( 150, 2 )
+texture = ExtResource( 4 )
+
+[node name="normal" type="Sprite" parent="difficulty"]
+visible = false
+position = Vector2( 150, 2 )
+texture = ExtResource( 5 )
+
+[node name="extreme" type="Sprite" parent="difficulty"]
+visible = false
+position = Vector2( 150, 2 )
+texture = ExtResource( 6 )
+
+[node name="scale" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 40.5, 120 )
+texture = ExtResource( 7 )
+
+[node name="single" type="Sprite" parent="scale"]
+position = Vector2( 170, 0 )
+texture = ExtResource( 8 )
+
+[node name="double" type="Sprite" parent="scale"]
+visible = false
+position = Vector2( 170, 0 )
+texture = ExtResource( 9 )
+
+[node name="triple" type="Sprite" parent="scale"]
+visible = false
+position = Vector2( 170, 0 )
+texture = ExtResource( 10 )
+
+[node name="fullscreen" type="Sprite" parent="scale"]
+visible = false
+position = Vector2( 170, 0 )
+texture = ExtResource( 11 )
+
+[node name="colors" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 46, 160 )
+texture = ExtResource( 12 )
+
+[node name="1" type="Node2D" parent="colors"]
+editor/display_folded = true
+
+[node name="blue" type="AnimatedSprite" parent="colors/1"]
+position = Vector2( 110, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "blue_idle"
+frame = 9
+playing = true
+centered = false
+
+[node name="2" type="Node2D" parent="colors"]
+editor/display_folded = true
+visible = false
+
+[node name="blue" type="AnimatedSprite" parent="colors/2"]
+position = Vector2( 110, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "blue_idle"
+frame = 10
+playing = true
+centered = false
+
+[node name="green" type="AnimatedSprite" parent="colors/2"]
+position = Vector2( 130, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "green_idle"
+frame = 5
+playing = true
+centered = false
+
+[node name="3" type="Node2D" parent="colors"]
+editor/display_folded = true
+visible = false
+
+[node name="blue" type="AnimatedSprite" parent="colors/3"]
+position = Vector2( 110, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "blue_idle"
+frame = 10
+playing = true
+centered = false
+
+[node name="green" type="AnimatedSprite" parent="colors/3"]
+position = Vector2( 130, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "green_idle"
+frame = 5
+playing = true
+centered = false
+
+[node name="purple" type="AnimatedSprite" parent="colors/3"]
+position = Vector2( 150, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "purple_idle"
+frame = 2
+playing = true
+centered = false
+
+[node name="4" type="Node2D" parent="colors"]
+editor/display_folded = true
+visible = false
+
+[node name="blue" type="AnimatedSprite" parent="colors/4"]
+position = Vector2( 110, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "blue_idle"
+frame = 11
+playing = true
+centered = false
+
+[node name="green" type="AnimatedSprite" parent="colors/4"]
+position = Vector2( 130, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "green_idle"
+frame = 6
+playing = true
+centered = false
+
+[node name="purple" type="AnimatedSprite" parent="colors/4"]
+position = Vector2( 150, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "purple_idle"
+frame = 2
+playing = true
+centered = false
+
+[node name="yellow" type="AnimatedSprite" parent="colors/4"]
+position = Vector2( 170, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "yellow_idle"
+frame = 2
+playing = true
+centered = false
+
+[node name="5" type="Node2D" parent="colors"]
+editor/display_folded = true
+visible = false
+
+[node name="blue" type="AnimatedSprite" parent="colors/5"]
+position = Vector2( 110, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "blue_idle"
+frame = 11
+playing = true
+centered = false
+
+[node name="green" type="AnimatedSprite" parent="colors/5"]
+position = Vector2( 130, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "green_idle"
+frame = 6
+playing = true
+centered = false
+
+[node name="purple" type="AnimatedSprite" parent="colors/5"]
+position = Vector2( 150, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "purple_idle"
+frame = 2
+playing = true
+centered = false
+
+[node name="yellow" type="AnimatedSprite" parent="colors/5"]
+position = Vector2( 170, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "yellow_idle"
+frame = 2
+playing = true
+centered = false
+
+[node name="orange" type="AnimatedSprite" parent="colors/5"]
+position = Vector2( 190, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "orange_idle"
+frame = 15
+playing = true
+centered = false
+
+[node name="6" type="Node2D" parent="colors"]
+editor/display_folded = true
+visible = false
+
+[node name="blue" type="AnimatedSprite" parent="colors/6"]
+position = Vector2( 110, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "blue_idle"
+frame = 12
+playing = true
+centered = false
+
+[node name="green" type="AnimatedSprite" parent="colors/6"]
+position = Vector2( 130, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "green_idle"
+frame = 7
+playing = true
+centered = false
+
+[node name="purple" type="AnimatedSprite" parent="colors/6"]
+position = Vector2( 150, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "purple_idle"
+frame = 3
+playing = true
+centered = false
+
+[node name="yellow" type="AnimatedSprite" parent="colors/6"]
+position = Vector2( 170, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "yellow_idle"
+frame = 3
+playing = true
+centered = false
+
+[node name="orange" type="AnimatedSprite" parent="colors/6"]
+position = Vector2( 190, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "orange_idle"
+frame = 16
+playing = true
+centered = false
+
+[node name="red" type="AnimatedSprite" parent="colors/6"]
+position = Vector2( 210, -10 )
+z_as_relative = false
+frames = ExtResource( 13 )
+animation = "red_idle"
+frame = 10
+playing = true
+centered = false
+
+[node name="back" type="Sprite" parent="."]
+position = Vector2( 160, 210 )
+texture = ExtResource( 14 )
+
+[node name="cursors" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 210, 120 )
+
+[node name="left" type="Sprite" parent="cursors"]
+position = Vector2( -70, 0 )
+texture = ExtResource( 15 )
+
+[node name="right" type="Sprite" parent="cursors"]
+position = Vector2( 70, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 15 )
+
+[node name="tween" type="Tween" parent="cursors"]
+
+[node name="menu_locations" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="difficulty" type="Node2D" parent="menu_locations"]
+position = Vector2( 215, 80 )
+
+[node name="scale" type="Node2D" parent="menu_locations"]
+position = Vector2( 215, 120 )
+
+[node name="colors" type="Node2D" parent="menu_locations"]
+position = Vector2( 215, 160 )
+
+[node name="back" type="Node2D" parent="menu_locations"]
+position = Vector2( 160, 210 )
+

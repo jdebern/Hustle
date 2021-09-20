@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://textures/game_multipliers.png" type="Texture" id=1]
+[ext_resource path="res://scripts/player/Multiplier.gd" type="Script" id=2]
+
+[node name="multiplier" type="Sprite"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+script = ExtResource( 2 )

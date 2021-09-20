@@ -1,0 +1,49 @@
+[gd_resource type="VisualShader" load_steps=3 format=2]
+
+[sub_resource type="VisualShaderNodeColorUniform" id=1]
+uniform_name = "bg_color"
+
+[sub_resource type="VisualShaderNodeInput" id=2]
+input_name = "fragcoord"
+
+[resource]
+code = "shader_type spatial;
+uniform vec4 bg_color : hint_color;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Input:3
+	vec3 n_out3p0;
+	n_out3p0 = FRAGCOORD.xyz;
+
+// ColorUniform:2
+	vec3 n_out2p0;
+	float n_out2p1;
+	n_out2p0 = bg_color.rgb;
+	n_out2p1 = bg_color.a;
+
+// Output:0
+	ALBEDO = n_out3p0;
+	ALPHA = n_out2p1;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -432, -52 )
+nodes/fragment/0/position = Vector2( 360, 100 )
+nodes/fragment/2/node = SubResource( 1 )
+nodes/fragment/2/position = Vector2( -220, 60 )
+nodes/fragment/3/node = SubResource( 2 )
+nodes/fragment/3/position = Vector2( 40, 0 )
+nodes/fragment/connections = PoolIntArray( 2, 1, 0, 1, 3, 0, 0, 0 )
+

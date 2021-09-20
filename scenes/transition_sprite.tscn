@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://textures/ui/versus_screen.png" type="Texture" id=1]
+[ext_resource path="res://scripts/screens/TransitionScreen.gd" type="Script" id=2]
+[ext_resource path="res://materials/transitions/versus_transition_in.tres" type="Material" id=3]
+[ext_resource path="res://materials/transitions/versus_transition_out.tres" type="Material" id=4]
+
+[node name="transition_sprite" type="Sprite"]
+visible = false
+z_index = 10
+z_as_relative = false
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset" ]
+TransitionInMaterial = ExtResource( 3 )
+TransitionOutMaterial = ExtResource( 4 )
+TransitionTime = 1.0
+

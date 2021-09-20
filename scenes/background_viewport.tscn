@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="background_viewport" type="Viewport"]
+hdr = false
+disable_3d = true
+usage = 0
+
+[node name="camera" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 360
+limit_bottom = 240
+

@@ -1,0 +1,163 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scripts/Game.gd" type="Script" id=1]
+[ext_resource path="res://scenes/versusplay.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/title_select.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/options.tscn" type="PackedScene" id=4]
+[ext_resource path="res://textures/backgrounds/parallax-industrial-bg.png" type="Texture" id=5]
+[ext_resource path="res://textures/backgrounds/parallax-industrial-buildings-far.png" type="Texture" id=6]
+[ext_resource path="res://scripts/screens/ParallaxTexture.gd" type="Script" id=7]
+[ext_resource path="res://textures/backgrounds/parallax-industrial-buildings-medium.png" type="Texture" id=8]
+[ext_resource path="res://textures/backgrounds/parallax-industrial-buildings-close.png" type="Texture" id=9]
+[ext_resource path="res://textures/backgrounds/parallax-mountain-bg.png" type="Texture" id=10]
+[ext_resource path="res://textures/backgrounds/parallax-mountain-montain-far.png" type="Texture" id=11]
+[ext_resource path="res://textures/backgrounds/parallax-mountain-mountains.png" type="Texture" id=12]
+[ext_resource path="res://textures/backgrounds/parallax-mountain-trees.png" type="Texture" id=13]
+[ext_resource path="res://textures/backgrounds/parallax-mountain-foreground-trees.png" type="Texture" id=14]
+[ext_resource path="res://textures/backgrounds/parallax-forest-back-trees.png" type="Texture" id=15]
+[ext_resource path="res://textures/backgrounds/parallax-forest-lights.png" type="Texture" id=16]
+[ext_resource path="res://textures/backgrounds/parallax-forest-middle-trees.png" type="Texture" id=17]
+[ext_resource path="res://textures/backgrounds/parallax-forest-front-trees.png" type="Texture" id=18]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="screens" type="Node2D" parent="."]
+
+[node name="play" parent="screens" instance=ExtResource( 2 )]
+visible = false
+show_behind_parent = true
+
+[node name="title_select" parent="screens" instance=ExtResource( 3 )]
+
+[node name="options" parent="screens" instance=ExtResource( 4 )]
+visible = false
+
+[node name="backgrounds" type="Node2D" parent="."]
+
+[node name="industrial" type="Node2D" parent="backgrounds"]
+visible = false
+
+[node name="background" type="Sprite" parent="backgrounds/industrial"]
+position = Vector2( -45, -0.540359 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 5 )
+centered = false
+
+[node name="buildings_far" type="Polygon2D" parent="backgrounds/industrial"]
+position = Vector2( -45, 47.7637 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 6 )
+polygon = PoolVector2Array( 0, 0, 0, 142, 213, 142, 213, 0 )
+script = ExtResource( 7 )
+Timescale = 0.5
+
+[node name="buildings_medium" type="Polygon2D" parent="backgrounds/industrial"]
+position = Vector2( -45, 40 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 8 )
+polygon = PoolVector2Array( 0, 0, 0, 150, 272, 150, 272, 0 )
+script = ExtResource( 7 )
+Timescale = 4.0
+
+[node name="buildings_close" type="Polygon2D" parent="backgrounds/industrial"]
+position = Vector2( -45, 85.7637 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 9 )
+polygon = PoolVector2Array( 0, 0, 0, 104, 272, 104, 272, 0 )
+script = ExtResource( 7 )
+Timescale = 7.0
+
+[node name="mountains" type="Node2D" parent="backgrounds"]
+visible = false
+
+[node name="background" type="Sprite" parent="backgrounds/mountains"]
+position = Vector2( -45, -0.540359 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 10 )
+centered = false
+
+[node name="mountain_far" type="Polygon2D" parent="backgrounds/mountains"]
+position = Vector2( -80, 80 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 11 )
+polygon = PoolVector2Array( 0, 0, 0, 160, 544, 160, 544, 0 )
+
+[node name="mountain_close" type="Polygon2D" parent="backgrounds/mountains"]
+position = Vector2( -50, 80 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 12 )
+polygon = PoolVector2Array( 0, 0, 0, 160, 544, 160, 544, 0 )
+script = ExtResource( 7 )
+Timescale = 0.5
+
+[node name="tree_far" type="Polygon2D" parent="backgrounds/mountains"]
+position = Vector2( -50, 80 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 13 )
+polygon = PoolVector2Array( 0, 0, 0, 160, 544, 160, 544, 0 )
+script = ExtResource( 7 )
+Timescale = 10.0
+
+[node name="tree_close" type="Polygon2D" parent="backgrounds/mountains"]
+position = Vector2( -49.3698, 73.0673 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 14 )
+polygon = PoolVector2Array( 0, 0, 0, 160, 544, 160, 544, 0 )
+script = ExtResource( 7 )
+Timescale = 15.0
+
+[node name="forest" type="Node2D" parent="backgrounds"]
+
+[node name="background" type="Sprite" parent="backgrounds/forest"]
+position = Vector2( -45, -0.540359 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 15 )
+centered = false
+
+[node name="lights" type="Polygon2D" parent="backgrounds/forest"]
+position = Vector2( -45, 0 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 16 )
+polygon = PoolVector2Array( 0, 0, 0, 160, 272, 160, 272, 0 )
+script = ExtResource( 7 )
+
+[node name="trees_middle" type="Polygon2D" parent="backgrounds/forest"]
+position = Vector2( -45, 0 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 17 )
+polygon = PoolVector2Array( 0, 0, 0, 160, 272, 160, 272, 0 )
+script = ExtResource( 7 )
+Timescale = 2.0
+
+[node name="trees_close" type="Polygon2D" parent="backgrounds/forest"]
+position = Vector2( -45, 0 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 18 )
+polygon = PoolVector2Array( 0, 0, 0, 160, 272, 160, 272, 0 )
+script = ExtResource( 7 )
+Timescale = 5.0
+
+[connection signal="GameRematch" from="screens/play" to="." method="_on_play_GameRematch"]

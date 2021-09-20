@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/Game.gd" type="Script" id=1]
+[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://textures/characters/dog_1.png" type="Texture" id=3]
+[ext_resource path="res://textures/characters/frog_1.png" type="Texture" id=4]
+[ext_resource path="res://textures/gametext.png" type="Texture" id=5]
+[ext_resource path="res://textures/game_background_brick.png" type="Texture" id=6]
+
+[node name="root" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 240.0 ],
+"_edit_vertical_guides_": [ 320.0 ]
+}
+
+[node name="p1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 17, 35 )
+
+[node name="dog" type="Sprite" parent="."]
+position = Vector2( 34, 25 )
+texture = ExtResource( 3 )
+
+[node name="frog" type="Sprite" parent="."]
+position = Vector2( 291, 27.3798 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 4 )
+
+[node name="gametext" type="Sprite" parent="."]
+position = Vector2( 161, 20 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture = ExtResource( 6 )
+polygon = PoolVector2Array( -1, -1, 321, -1, 321, 241, -1, 241 )

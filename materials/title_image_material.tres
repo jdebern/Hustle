@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://shaders/title_image.shader" type="Shader" id=1]
+[ext_resource path="res://textures/ui/title.png" type="Texture" id=2]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/background_index = 0
+shader_param/MASK_0 = Color( 1, 1, 1, 1 )
+shader_param/MASK_1 = Color( 0.74902, 0.74902, 0.74902, 1 )
+shader_param/MASK_2 = Color( 0.498039, 0.498039, 0.498039, 1 )
+shader_param/MASK_3 = Color( 0.247059, 0.247059, 0.247059, 1 )
+shader_param/MASK_4 = Color( 0, 0, 0, 1 )
+shader_param/BG_0_MASK_0 = Color( 0.78, 0.97, 0.76, 1 )
+shader_param/BG_0_MASK_1 = Color( 0.19, 0.39, 0.34, 1 )
+shader_param/BG_0_MASK_2 = Color( 0.11, 0.27, 0.24, 1 )
+shader_param/BG_0_MASK_3 = Color( 0.07, 0.19, 0.18, 1 )
+shader_param/BG_0_MASK_4 = Color( 0.1, 0.16, 0.12, 1 )
+shader_param/BG_1_MASK_0 = Color( 0.79, 0.51, 0.22, 1 )
+shader_param/BG_1_MASK_1 = Color( 0.69, 0.48, 0.19, 1 )
+shader_param/BG_1_MASK_2 = Color( 0.6, 0.31, 0.2, 1 )
+shader_param/BG_1_MASK_3 = Color( 0.33, 0.26, 0.21, 1 )
+shader_param/BG_1_MASK_4 = Color( 0.18, 0.18, 0.19, 1 )
+shader_param/BG_2_MASK_0 = Color( 0.67, 0.42, 0.54, 1 )
+shader_param/BG_2_MASK_1 = Color( 0.53, 0.36, 0.51, 1 )
+shader_param/BG_2_MASK_2 = Color( 0.32, 0.18, 0.29, 1 )
+shader_param/BG_2_MASK_3 = Color( 0.26, 0.14, 0.11, 1 )
+shader_param/BG_2_MASK_4 = Color( 0.19, 0.13, 0.22, 1 )
+shader_param/image = ExtResource( 2 )
