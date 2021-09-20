@@ -10,3 +10,9 @@ Left Shift - swap blocks / accept action
 ##### Player 2 (right)
 Arrow Keys - move cursor
 Space bar - swap blocks / accept action
+
+![Start](https://i.imgur.com/M36eTdg.gif)
+
+![Play](https://i.imgur.com/rcf7kDX.gif)
+
+![Win](https://i.imgur.com/BNeZi20.gif)
