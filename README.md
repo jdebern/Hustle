@@ -15,4 +15,4 @@ Space bar - swap blocks / accept action
 
 ![Play](https://i.imgur.com/rcf7kDX.gif)
 
-![Win](https://i.imgur.com/BNeZi20.gif)
+Win: https://i.imgur.com/BNeZi20.gif
