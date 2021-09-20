@@ -6,9 +6,11 @@ An on/off endeavor to learn Godot by making a clone of Panel de Pon / Tetris Att
 Escape Key - Change the background!
 ##### Player 1 (left)
 WASD - move cursor
+
 Left Shift - swap blocks / accept action
 ##### Player 2 (right)
 Arrow Keys - move cursor
+
 Space bar - swap blocks / accept action
 
 ![Start](https://i.imgur.com/M36eTdg.gif)
